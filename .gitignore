@@ -1,0 +1,38 @@
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 環境ファイル
+.env
+.env.local
+.env.*.local
+
+# OSやエディタの一時ファイル
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Docker 一時ファイルなど
+**/tmp/
+**/cache/
+.docker/
+
+# coverage 等
+coverage/
+
+# DynamoDB ローカルデータ
+dynamodb/local/
+
+# src 配下の Next.js 向け除外
+src/.next/
+src/out/
+src/dist/
+src/node_modules/
+src/.env
+src/.env.local
+src/.env.*.local
+src/sample_data.json
