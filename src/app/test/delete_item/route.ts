@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { DeleteCommand } from "@aws-sdk/lib-dynamodb";
-import { client } from "@/lib/client";
+import { client } from "@/libs/client";
 
 export async function GET() {
   try {

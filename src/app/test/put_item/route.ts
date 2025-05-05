@@ -1,6 +1,6 @@
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-import { client } from "@/lib/client"; 
+import { client } from "@/libs/client"; 
 import { NextResponse } from "next/server";
 
 export async function GET() {

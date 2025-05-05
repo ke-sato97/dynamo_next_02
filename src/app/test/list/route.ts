@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { ListTablesCommand } from "@aws-sdk/client-dynamodb";
-import { client } from "@/lib/client";
+import { client } from "@/libs/client";
 
 export async function GET() {
   try {
