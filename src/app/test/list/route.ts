@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { ListTablesCommand } from "@aws-sdk/client-dynamodb";
-import { client } from "@/libs/client";
+import { DynamoClient } from "@/libs/client";
 
 export async function GET() {
   try {
+    const client = await DynamoClient();
     const command = new ListTablesCommand({});
     const data = await client.send(command);
     return NextResponse.json({ tables: data.TableNames ?? [] });

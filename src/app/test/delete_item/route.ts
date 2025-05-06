@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { DeleteCommand } from "@aws-sdk/lib-dynamodb";
-import { client } from "@/libs/client";
+import { DynamoClient } from "@/libs/client";
 
 export async function GET() {
   try {
+    const client = await DynamoClient();
     console.log('GET request to endpoint processed');
 
       const command = new DeleteCommand({
