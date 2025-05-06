@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { GetItemCommand } from "@aws-sdk/client-dynamodb";
-import { client } from "@/libs/client";
+import { DynamoClient } from "@/libs/client";
 
 type ResponseData = {
   test: string;
@@ -9,6 +9,7 @@ type ResponseData = {
 
 export async function GET() {
   try {
+    const client = await DynamoClient();
     console.log('GET request to endpoint processed');
 
       const command = new GetItemCommand({
