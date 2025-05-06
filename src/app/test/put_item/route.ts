@@ -1,25 +1,19 @@
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
-import { client } from "@/lib/client"; 
+import { DynamoClient } from "@/libs/client"; 
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  // const command = new PutCommand({
-  //   TableName: "gui-table",
-  //   Item: {
-  //     "id": "3",
-  //     "created_at": "2024-01-01T00:00:00Z"
-  //   },
-  // });
   try {
+    const client = await DynamoClient();
     const input: any = {
-      TableName: "gui-table",
+      TableName: "cli-table",
       Item: {
         id: {
-          S: "3"
+          S: "10"
         },
         name: {
-          S: "佐藤 圭太"
+          S: "手須戸 吾郎"
         },
         created_at: {
           S: "2025-01-01T00:00:00Z"

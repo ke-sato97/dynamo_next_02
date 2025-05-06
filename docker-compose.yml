@@ -28,8 +28,6 @@ services:
       - .:/app
     working_dir: /app/src
     tty: true
-    environment:
-      - DYNAMODB_ENDPOINT=http://dynamodb:8000
     depends_on:
       - dynamodb
     command: npm run dev
